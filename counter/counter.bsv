@@ -10,7 +10,7 @@ endinterface
 (* synthesize *)
 (* always_ready *)
 module counter(Ifc_counter);
-    Reg#(Bit#(8)) value <- mkReg(69);        // synchronous reg
+    Reg#(Bit#(8)) value <- mkReg(0);        // synchronous reg
 
     method Bit#(8) read();
         return value;
