@@ -4,7 +4,6 @@ import counter::*;
 (* synthesize *)
 module counter_tb();
     Ifc_counter count <- counter();
-    Reg#(Bit#(8)) state <- mkReg(0);
 
     Stmt test_seq = seq 
         action count.load(254); $display($time, "\tCurrent value of counter:%d", count.read()); endaction //clk1
